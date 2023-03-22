@@ -1,6 +1,6 @@
 package br.com.scorpion.userapi.api.users.controller;
 
-import br.com.scorpion.userapi.api.users.usecase.UserUseCase;
+import br.com.scorpion.userapi.api.users.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class UserController {
 
-    private final UserUseCase userUseCase;
+    private final UserService userService;
 
     @Autowired
-    public UserController(UserUseCase userUseCase) {
-        this.userUseCase = userUseCase;
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 }
