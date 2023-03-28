@@ -1,13 +1,16 @@
 package br.com.scorpion.userapi.shared.domain.entity;
 
-import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "tb_user")
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
     @Id
